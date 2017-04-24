@@ -78,7 +78,7 @@ var $iTagMaxElem;
 	    $aHREF = & $this->aHREF;
 	    $maxElem = & $this->iTagMaxElem;
 
-	    if (!preg_match("/^</([a-zA-Z1-9]{1,$maxElem})>$/i", $p_tag, $reg)) return false;
+	    if (!preg_match("/^</([a-zA-Z1-9]{1,$maxElem})>$/", $p_tag, $reg)) return false;
 
 	    $p_tag = $reg[1];
 
