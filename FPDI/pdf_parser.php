@@ -99,7 +99,7 @@ if (!call_user_func_array('class_exists', $__tmp)) {
          *
          * @param string $filename  Source-Filename
          */
-    	function pdf_parser($filename) {
+    	function __construct($filename) {
             $this->filename = $filename;
             
             $this->f = @fopen($this->filename, 'rb');

@@ -33,7 +33,7 @@ function txtentities($html){
 /************************************/
 class createPDF {
 
-	function createPDF($_html,$_title,$_articleurl,$_author,$_date) {
+	function __construct($_html,$_title,$_articleurl,$_author,$_date) {
 		// main vars
 		$this->html=$_html;               // html text to _convert to PDF
 		$this->title=$_title;             // article title
@@ -142,7 +142,7 @@ class HTML2PDF extends FPDF
 	var $issetfont;
 	var $issetcolor;
 
-	function HTML2PDF($orientation='P',$unit='mm',$format='A4',$_title='',$_url='',$_debug=false)
+	function __construct($orientation='P',$unit='mm',$format='A4',$_title='',$_url='',$_debug=false)
 	{
 		$this->FPDF($orientation,$unit,$format);
 		$this->B=0;
@@ -235,7 +235,7 @@ class HTML2PDF extends FPDF
 						$a2=explode(' ',$e);
 						$tag=strtoupper(array_shift($a2));
 						$attr=array();
-						foreach($a2 as $v) if(ereg('^([^=]*)=["\']?([^"\']*)["\']?$',$v,$a3)) {
+						foreach($a2 as $v) if(preg_match('/^([^=]*)=["\']?([^"\']*)["\']?$/',$v,$a3)) {
 							$attr[strtoupper($a3[1])]=$a3[2];
 						}
 						$this->OpenTag($tag,$attr);

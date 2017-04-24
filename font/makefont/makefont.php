@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
-* Utilitaire de génération de fichier de définition de police                  *
+* Utilitaire de gï¿½nï¿½ration de fichier de dï¿½finition de police                  *
 *                                                                              *
 * Version : 1.14                                                               *
 * Date :    03/08/2008                                                         *
@@ -291,17 +291,15 @@ function CheckTTF($file)
 }
 
 /*******************************************************************************
-* fontfile : chemin du fichier TTF (ou chaîne vide si pas d'incorporation)     *
+* fontfile : chemin du fichier TTF (ou chaï¿½ne vide si pas d'incorporation)     *
 * afmfile :  chemin du fichier AFM                                             *
-* enc :      encodage (ou chaîne vide si la police est symbolique)             *
+* enc :      encodage (ou chaï¿½ne vide si la police est symbolique)             *
 * patch :    patch optionnel pour l'encodage                                   *
 * type :     type de la police si fontfile est vide                            *
 *******************************************************************************/
 function MakeFont($fontfile, $afmfile, $enc='cp1252', $patch=array(), $type='TrueType')
 {
 	//Generate a font definition file
-	if(get_magic_quotes_runtime())
-		@set_magic_quotes_runtime(0);
 	ini_set('auto_detect_line_endings','1');
 	if($enc)
 	{

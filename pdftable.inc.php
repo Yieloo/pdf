@@ -45,7 +45,7 @@ var $defaultFontFamily ;
 var $defaultFontStyle;
 var $defaultFontSize;
 
-function PDFTable($orientation='P',$unit='mm',$format='A4'){
+function __construct($orientation='P',$unit='mm',$format='A4'){
 	parent::FPDF($orientation,$unit,$format);
 	$this->SetMargins(20,20,20);
 	$this->SetAuthor('Pham Minh Dung');
