@@ -1,4 +1,5 @@
 # Librairie Pdf IK
+* Génération de fichiers PDF
 
 ## Version 1.0.1
 * Compatible PHP7
