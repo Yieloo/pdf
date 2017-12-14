@@ -46,7 +46,7 @@ var $defaultFontStyle;
 var $defaultFontSize;
 
 function __construct($orientation='P',$unit='mm',$format='A4'){
-	parent::FPDF($orientation,$unit,$format);
+	parent::_construct($orientation,$unit,$format);
 	$this->SetMargins(20,20,20);
 	$this->SetAuthor('Pham Minh Dung');
 	$this->_makePageSize();

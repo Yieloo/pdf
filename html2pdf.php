@@ -144,7 +144,7 @@ class HTML2PDF extends FPDF
 
 	function __construct($orientation='P',$unit='mm',$format='A4',$_title='',$_url='',$_debug=false)
 	{
-		$this->FPDF($orientation,$unit,$format);
+		parent::__construct($orientation,$unit,$format);
 		$this->B=0;
 		$this->I=0;
 		$this->U=0;
